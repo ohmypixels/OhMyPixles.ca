@@ -160,7 +160,7 @@ header p {
 }
 
 .featured-image img {
-    width: 100%;
+    width: 60%;
     max-width: 450px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
