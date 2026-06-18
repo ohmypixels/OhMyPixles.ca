@@ -5,20 +5,21 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f7edf3;
+    background: #f8f5ff;
     color: #444;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Background Decorations */
+/* Scattered Bakery Background */
+
 body::before {
     content: "🧁";
     position: fixed;
     top: 8%;
     left: 5%;
     font-size: 42px;
-    opacity: 0.18;
+    opacity: 0.25;
     transform: rotate(-18deg);
     pointer-events: none;
 }
@@ -29,16 +30,59 @@ body::after {
     top: 25%;
     right: 6%;
     font-size: 38px;
-    opacity: 0.18;
+    opacity: 0.25;
     transform: rotate(22deg);
     pointer-events: none;
 }
 
+header::before {
+    content: "🍪";
+    position: fixed;
+    top: 45%;
+    left: 10%;
+    font-size: 34px;
+    opacity: 0.22;
+    transform: rotate(-30deg);
+    pointer-events: none;
+}
+
+header::after {
+    content: "🧁";
+    position: fixed;
+    top: 65%;
+    right: 8%;
+    font-size: 40px;
+    opacity: 0.22;
+    transform: rotate(25deg);
+    pointer-events: none;
+}
+
+.container::before {
+    content: "🎂";
+    position: fixed;
+    top: 75%;
+    left: 18%;
+    font-size: 42px;
+    opacity: 0.22;
+    transform: rotate(-15deg);
+    pointer-events: none;
+}
+
+.container::after {
+    content: "🍩";
+    position: fixed;
+    top: 35%;
+    right: 20%;
+    font-size: 34px;
+    opacity: 0.22;
+    transform: rotate(30deg);
+    pointer-events: none;
+}
 
 /* Navigation */
 
 nav {
-    background: #d8aebf;
+    background: #ddd6fe;
     text-align: center;
     padding: 18px;
     position: sticky;
@@ -48,7 +92,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: #5b21b6;
     text-decoration: none;
     margin: 0 12px;
     font-size: 18px;
@@ -65,7 +109,6 @@ header {
     text-align: center;
     padding: 50px 20px;
     position: relative;
-    z-index: 2;
 }
 
 .logo {
@@ -75,7 +118,7 @@ header {
 }
 
 header h1 {
-    color: #c07a9d;
+    color: #8b5cf6;
     font-size: 3rem;
     margin: 20px 0 10px;
 }
@@ -92,13 +135,12 @@ header p {
     margin: auto;
     padding: 20px;
     position: relative;
-    z-index: 2;
 }
 
 /* Hero Section */
 
 .hero {
-    background: rgba(255,255,255,0.92);
+    background: rgba(255,255,255,0.95);
     padding: 40px;
     border-radius: 25px;
     text-align: center;
@@ -107,7 +149,7 @@ header p {
 }
 
 .hero h2 {
-    color: #c07a9d;
+    color: #8b5cf6;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
@@ -120,7 +162,7 @@ header p {
 
 .button {
     display: inline-block;
-    background: #c07a9d;
+    background: #a78bfa;
     color: white;
     text-decoration: none;
     padding: 12px 24px;
@@ -131,7 +173,7 @@ header p {
 }
 
 .button:hover {
-    background: #b06a8c;
+    background: #8b5cf6;
 }
 
 /* Cards */
@@ -156,7 +198,13 @@ header p {
 .card h3,
 .price-box h3,
 .review-card h4 {
-    color: #c07a9d;
+    color: #8b5cf6;
+}
+
+.card strong {
+    display: block;
+    margin-top: 15px;
+    color: #8b5cf6;
 }
 
 /* Sections */
@@ -167,7 +215,7 @@ section {
 
 section h2 {
     text-align: center;
-    color: #c07a9d;
+    color: #8b5cf6;
     margin-bottom: 25px;
 }
 
@@ -175,11 +223,6 @@ section h2 {
 
 .gallery-section {
     margin-bottom: 60px;
-}
-
-.gallery-section h2 {
-    text-align: center;
-    color: #c07a9d;
 }
 
 .gallery-grid {
@@ -202,60 +245,15 @@ section h2 {
     transform: scale(1.04);
 }
 
-/* Featured Image */
-
-.featured-image {
-    text-align: center;
-    margin-top: 25px;
-}
-
-.featured-image img {
-    width: 100%;
-    max-width: 260px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
-/* Pricing */
-
-.price-box ul {
-    padding-left: 20px;
-}
-
-.price-box li {
-    margin-bottom: 10px;
-}
-
-/* Reviews */
-
-.review-card {
-    text-align: center;
-}
-
-.review-card h4 {
-    margin-bottom: 10px;
-}
-
-/* Contact */
-
-.contact-box {
-    text-align: left;
-}
-
-.contact-box h3 {
-    color: #c07a9d;
-}
-
 /* Footer */
 
 footer {
-    background: #d8aebf;
-    color: white;
+    background: #ddd6fe;
+    color: #5b21b6;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    position: relative;
-    z-index: 2;
+    font-weight: bold;
 }
 
 /* Mobile */
@@ -286,54 +284,4 @@ footer {
     .logo {
         width: 220px;
     }
-
-    body::before,
-    body::after {
-        font-size: 20px;
-    }
-}
-/* Scattered Bakery Background */
-
-header::before {
-    content: "🍪";
-    position: fixed;
-    top: 45%;
-    left: 10%;
-    font-size: 34px;
-    opacity: 0.15;
-    transform: rotate(-30deg);
-    pointer-events: none;
-}
-
-header::after {
-    content: "🧁";
-    position: fixed;
-    top: 65%;
-    right: 8%;
-    font-size: 40px;
-    opacity: 0.15;
-    transform: rotate(25deg);
-    pointer-events: none;
-}
-
-.container::before {
-    content: "🎂";
-    position: fixed;
-    top: 75%;
-    left: 18%;
-    font-size: 42px;
-    opacity: 0.15;
-    transform: rotate(-15deg);
-    pointer-events: none;
-}
-
-.container::after {
-    content: "🍩";
-    position: fixed;
-    top: 35%;
-    right: 20%;
-    font-size: 34px;
-    opacity: 0.15;
-    transform: rotate(30deg);
-    pointer-events: none;
 }
