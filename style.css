@@ -1,42 +1,196 @@
-/* FLOATING BACKGROUND DECORATIONS */
+/* =========================
+   OH MY PIXELS STYLE SHEET
+   ========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7edf3;
+    color: #444;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Background Decorations */
 
 body::before {
-    content: "🧁 ✨ 🍰 ✨ 🍪 ✨ 🎂 ✨";
+    content: "🧁 ✨ 🍰 ✨ 🍪 ✨ 🎂 ✨ 🧁 ✨ 🍩";
     position: fixed;
     top: 120px;
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 32px;
-    opacity: 0.15;
+    font-size: 28px;
+    opacity: 0.10;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
 }
 
 body::after {
-    content: "✨ 🍩 ✨ 🧁 ✨ 🍰 ✨";
+    content: "✨ 🍪 ✨ 🧁 ✨ 🍰 ✨ 🍩 ✨ 🎂";
     position: fixed;
     bottom: 120px;
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 32px;
-    opacity: 0.15;
+    font-size: 28px;
+    opacity: 0.10;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
 }
 
-/* KEEP CONTENT ABOVE DECORATIONS */
+/* Navigation */
 
-header,
-.container,
-footer,
 nav {
+    background: #d8aebf;
+    text-align: center;
+    padding: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 50px 20px;
     position: relative;
     z-index: 2;
 }
 
-/* GALLERY IMAGE IMPROVEMENTS */
+.logo {
+    width: 260px;
+    max-width: 90%;
+    border-radius: 25px;
+}
+
+header h1 {
+    color: #c07a9d;
+    font-size: 3rem;
+    margin: 20px 0 10px;
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #666;
+}
+
+/* Layout */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero Section */
+
+.hero {
+    background: rgba(255,255,255,0.92);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    color: #c07a9d;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+}
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    background: #c07a9d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    margin: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #b06a8c;
+}
+
+/* Cards */
+
+.card-grid,
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+
+.card,
+.price-box,
+.contact-box,
+.review-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card h3,
+.price-box h3,
+.review-card h4 {
+    color: #c07a9d;
+}
+
+/* Sections */
+
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    text-align: center;
+    color: #c07a9d;
+    margin-bottom: 25px;
+}
+
+/* Gallery */
+
+.gallery-section {
+    margin-bottom: 60px;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    color: #c07a9d;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 15px;
+}
 
 .gallery-grid img {
     width: 100%;
@@ -52,52 +206,93 @@ nav {
     transform: scale(1.04);
 }
 
-/* HOMEPAGE HERO CARD */
+/* Featured Image */
 
-.hero {
-    background: rgba(255,255,255,0.92);
-    border-radius: 25px;
-    padding: 40px;
+.featured-image {
     text-align: center;
-    margin-bottom: 40px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-/* REVIEW CARDS */
-
-.review-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
     margin-top: 25px;
 }
 
-.review-card {
-    background: white;
-    padding: 25px;
+.featured-image img {
+    width: 100%;
+    max-width: 260px;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.review-card h4 {
-    color: #c07a9d;
+/* Pricing */
+
+.price-box ul {
+    padding-left: 20px;
+}
+
+.price-box li {
     margin-bottom: 10px;
 }
 
-.review-card p {
-    margin: 0;
+/* Reviews */
+
+.review-card {
+    text-align: center;
 }
 
-/* MOBILE */
+.review-card h4 {
+    margin-bottom: 10px;
+}
+
+/* Contact */
+
+.contact-box {
+    text-align: left;
+}
+
+.contact-box h3 {
+    color: #c07a9d;
+}
+
+/* Footer */
+
+footer {
+    background: #d8aebf;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile */
 
 @media (max-width: 768px) {
 
-    body::before,
-    body::after {
-        font-size: 22px;
+    nav a {
+        font-size: 16px;
+        margin: 0 6px;
+    }
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
     }
 
     .hero {
         padding: 25px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 220px;
+    }
+
+    body::before,
+    body::after {
+        font-size: 20px;
     }
 }
