@@ -1,115 +1,132 @@
-/* OH MY Pixels Website */
-
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: #f7edf3;
+    color: #444;
+    line-height: 1.6;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background:
-        radial-gradient(circle at 10% 20%, rgba(216,168,184,.15) 0 8px, transparent 8px),
-        radial-gradient(circle at 80% 30%, rgba(186,148,255,.12) 0 6px, transparent 6px),
-        radial-gradient(circle at 25% 75%, rgba(255,192,203,.12) 0 10px, transparent 10px),
-        linear-gradient(to bottom, #fff9fb, #fdf2f6);
-    color: #333;
-    line-height: 1.6;
+/* Floating background decorations */
+
+body::before {
+    content: "🧁 ✨ 🍰 ✨ 🧁 ✨ 🍪 ✨";
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    font-size: 28px;
+    opacity: 0.08;
+    text-align: center;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: "✨ 🍩 ✨ 🎂 ✨ 🧁 ✨";
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+    font-size: 28px;
+    opacity: 0.08;
+    text-align: center;
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* Navigation */
 
 nav {
-    background: #d8a8b8;
-    padding: 15px;
+    background: #d8aebf;
     text-align: center;
+    padding: 18px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    margin: 0 12px;
     font-weight: bold;
-    margin: 0 15px;
-    transition: 0.3s;
+    font-size: 18px;
 }
 
 nav a:hover {
-    color: #fdf2f6;
+    opacity: 0.8;
 }
 
 /* Header */
 
 header {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(
-        135deg,
-        #f8e1e8,
-        #f4e8ff,
-        #fff9fb
-    );
-    border-bottom: 4px solid #e6c4d0;
+    padding: 50px 20px;
 }
 
 .logo {
-    max-width: 180px;
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 20px;
+    width: 240px;
+    max-width: 90%;
+    border-radius: 25px;
 }
 
 header h1 {
+    color: #c07a9d;
     font-size: 3rem;
-    color: #b36f86;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #666;
 }
 
-/* Main Content */
+/* Layout */
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
-section {
-    margin-bottom: 60px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #b36f86;
-    text-shadow: 1px 1px 0 rgba(255,255,255,.7);
-}
-
-/* Hero Section */
+/* Hero */
 
 .hero {
-    text-align: center;
-    padding: 40px;
-    background: white;
+    background: rgba(255,255,255,0.85);
     border-radius: 25px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .hero h2 {
-    font-size: 2.3rem;
+    color: #c07a9d;
+    font-size: 2.4rem;
 }
 
 .hero p {
-    max-width: 700px;
-    margin: auto;
     font-size: 1.1rem;
+}
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    background: #c07a9d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #b06a8c;
 }
 
 /* Cards */
@@ -117,121 +134,109 @@ h2 {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
+    margin-top: 20px;
 }
 
-.card {
+.card,
+.price-box,
+.contact-box {
     background: white;
-    padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.08);
-    transition: .3s;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-.card:hover {
-    transform: translateY(-4px);
+.card h3,
+.price-box h3 {
+    color: #c07a9d;
 }
 
-.card h3 {
-    color: #b36f86;
-    margin-bottom: 10px;
+/* Featured Image */
+
+.featured-image {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.featured-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 /* Gallery */
 
+.gallery-section {
+    margin-bottom: 60px;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    color: #c07a9d;
+    margin-bottom: 25px;
+}
+
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 15px;
 }
 
 .gallery-grid img {
     width: 100%;
     border-radius: 15px;
-    display: block;
-    box-shadow: 0 3px 10px rgba(0,0,0,.08);
-    transition: .3s;
     cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
-/* Pricing */
+/* Sections */
 
-.price-box {
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+section {
+    margin-bottom: 50px;
 }
 
-.price-box h3 {
-    color: #b36f86;
-    margin-bottom: 10px;
-}
-
-/* Contact */
-
-.contact-box {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
+section h2 {
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,.08);
-}
-
-.contact-box p {
-    margin: 10px 0;
-}
-
-/* Buttons */
-
-.button {
-    display: inline-block;
-    background: #d8a8b8;
-    color: white;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    margin: 10px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background: #b36f86;
+    color: #c07a9d;
+    margin-bottom: 25px;
 }
 
 /* Footer */
 
 footer {
+    background: #d8aebf;
+    color: white;
     text-align: center;
-    padding: 30px;
-    background: #f8e1e8;
-    margin-top: 50px;
+    padding: 20px;
+    margin-top: 40px;
 }
 
 /* Mobile */
 
 @media (max-width: 768px) {
 
+    nav a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 16px;
+    }
+
     header h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
 
     .hero h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 5px 8px;
-    }
-
-    .logo {
-        max-width: 150px;
+    .hero {
+        padding: 25px;
     }
 }
