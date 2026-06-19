@@ -1,1 +1,1 @@
-# OhMyPixles.ca
+# OhMyPixels.ca
